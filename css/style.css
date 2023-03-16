@@ -72,4 +72,9 @@ main .container-list{
 .barred{
     text-decoration: line-through;
 }
+
+.empty-title{
+    color: grey;
+    text-align: center;
+}
 /* fine main */

@@ -27,12 +27,16 @@
 
         <main>
             <div class="container-list">
-                <ul>
+
+                <h1 class="empty-title" v-if="tasksList.length == 0">Nessuna Task</h1>
+
+                <ul v-else>
                     <li v-for="(task, index) in tasksList">
                         <span :class = "(task.done == true)? 'barred':'' " @click="completedTask(task)">{{task.text}}</span>
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </li>
                 </ul>
+
             </div>
         </main>
 

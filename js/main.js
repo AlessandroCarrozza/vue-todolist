@@ -6,19 +6,19 @@ const { createApp } = Vue
       return {
         tasksList : [
             {
-                text : "una task",
+                text : "prima task",
                 done : false,
             },
             {
-                text : "una task",
+                text : "seconda task",
                 done : false,
             },
             {
-                text : "una task",
+                text : "terza task",
                 done : false,
             },
             {
-                text : "una task",
+                text : "quarta task",
                 done : false,
             },
         ]
@@ -27,6 +27,9 @@ const { createApp } = Vue
     methods : {
         completedTask (task){
             task.done = !task.done;
-        }
+        },
+        removeTask (index){
+            this.tasksList.splice(index, 1);
+        },
     }
   }).mount('#app')
