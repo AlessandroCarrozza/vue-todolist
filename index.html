@@ -20,6 +20,7 @@
             <div class="container-input">
                 <input v-model="newTaskText" type="text" placeholder="Nuova Task">
                 <button @click="addTask(tasksList)">Aggiungi</button>
+                <h4 v-if="validText" class="error-message">La Task deve essere di almeno 4 caratteri</h4>
             </div>
 
         </header>
