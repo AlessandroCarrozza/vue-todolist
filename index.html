@@ -18,8 +18,8 @@
             <h1>To Do List</h1>
 
             <div class="container-input">
-                <input type="text" placeholder="Nuova Task">
-                <button>Aggiungi</button>
+                <input v-model="newTaskText" type="text" placeholder="Nuova Task">
+                <button @click="addTask(tasksList)">Aggiungi</button>
             </div>
 
         </header>
@@ -28,7 +28,10 @@
         <main>
             <div class="container-list">
 
-                <h1 class="empty-title" v-if="tasksList.length == 0">Nessuna Task</h1>
+                <div class="empty-title" v-if="tasksList.length == 0">
+                    <h1>Lista Vuota</h1>
+                    <h3>Aggiungi una Task</h3>
+                </div>
 
                 <ul v-else>
                     <li v-for="(task, index) in tasksList">

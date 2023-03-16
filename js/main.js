@@ -4,32 +4,26 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        newTaskText : "",
         tasksList : [
-            {
-                text : "prima task",
-                done : false,
-            },
-            {
-                text : "seconda task",
-                done : false,
-            },
-            {
-                text : "terza task",
-                done : false,
-            },
-            {
-                text : "quarta task",
-                done : false,
-            },
         ]
       }
     },
     methods : {
-        completedTask (task){
+        completedTask(task) {
             task.done = !task.done;
         },
-        removeTask (index){
+        removeTask(index) {
             this.tasksList.splice(index, 1);
         },
+        addTask(listName) {
+            listName.unshift(
+                {
+                    text : this.newTaskText,
+                    done : false,
+                });
+
+            this.newTaskText = "";
+        }
     }
   }).mount('#app')
