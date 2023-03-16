@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
 
-    <div id="app">{{ message }}</div>
+    <div id="app">
+
+        <header>
+
+            <h1>To Do List</h1>
+
+            <div class="container-input">
+                <input type="text" placeholder="Nuova Task">
+                <button>Aggiungi</button>
+            </div>
+
+        </header>
+
+
+        <main>
+            <div class="container-list">
+                <ul>
+                    <li>testo</li>
+                    <li>testo</li>
+                    <li>testo</li>
+                    <li>testo</li>
+                </ul>
+            </div>
+        </main>
+
+    </div>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
