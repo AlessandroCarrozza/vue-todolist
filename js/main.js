@@ -17,7 +17,16 @@ const { createApp } = Vue
                 text : "una task",
                 done : false,
             },
+            {
+                text : "una task",
+                done : false,
+            },
         ]
       }
+    },
+    methods : {
+        completedTask (task){
+            task.done = !task.done;
+        }
     }
   }).mount('#app')
