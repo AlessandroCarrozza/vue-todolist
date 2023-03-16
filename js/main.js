@@ -32,6 +32,7 @@ const { createApp } = Vue
 
                 this.validText = false;
             }
+            
             this.newTaskText = "";
         }
     }
